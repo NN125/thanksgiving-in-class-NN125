@@ -36,5 +36,12 @@ export default (() => {
       // Update the state
       this.setState({ dishes: newDishes });
     },
+    deleteDish(dishId) {
+      const newDishes = state.dishes.filter(
+        (dish) => dish.id !== Number(dishId),
+      );
+
+      this.setState({ dishes: newDishes });
+    },
   };
 })();
